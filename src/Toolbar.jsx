@@ -270,10 +270,10 @@ function SchedulerToolbar (props) {
                 }}
               >
                 {[
-                  { label: t('month'), value: 'month' },
-                  { label: t('week'), value: 'week' },
-                  { label: t('day'), value: 'day' },
-                  { label: t('timeline'), value: 'timeline' }
+                  { label: t('месяц'), value: 'month' },
+                  { label: t('неделя'), value: 'week' },
+                  { label: t('день'), value: 'day' },
+                  { label: t('график времени'), value: 'timeline' }
                 ].map(tb => (
                   <ToggleButton sx={{ mt: .5 }} key={tb.value} value={tb.value}>
                     {tb.label}

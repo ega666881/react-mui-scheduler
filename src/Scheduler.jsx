@@ -65,9 +65,9 @@ function Scheduler(props) {
   const [weekDays, updateWeekDays]= useReducer((state) => {
     if (options?.startWeekOn?.toUpperCase() === 'SUN') {
       return [
-        t('sun'), t('mon'), t('tue'),
-        t('wed'), t('thu'), t('fri'),
-        t('sat')
+        t('вск'), t('пн'), t('вт'),
+        t('ср'), t('чт'), t('пт'),
+        t('сб')
       ]
     }
     return weeks

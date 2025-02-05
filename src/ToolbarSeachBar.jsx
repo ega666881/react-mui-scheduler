@@ -83,7 +83,7 @@ function ToolbarSearchbar (props) {
         <TextField
           {...params}
           size="small"
-          label={t('search')}
+          label={'Поиск'}
           InputProps={{...params.InputProps}}
         />
       )}
