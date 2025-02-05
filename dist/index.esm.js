@@ -35,18 +35,18 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import { enAU, fr, ko, de, es, ar, ja, ru, zhCN } from 'date-fns/locale';
 
-var day$7 = "Day";
-var week$7 = "Week";
-var month$7 = "Month";
-var timeline$7 = "Timeline";
-var mon$7 = "Mon";
-var tue$7 = "Tue";
-var wed$7 = "Wed";
-var thu$7 = "Thu";
-var fri$7 = "Fri";
-var sat$7 = "Sat";
-var sun$7 = "Sun";
-var search$7 = "Search...";
+var day$7 = "День";
+var week$7 = "Неделя";
+var month$7 = "Месяц";
+var timeline$7 = "График времени";
+var mon$7 = "Пон";
+var tue$7 = "Вт";
+var wed$7 = "Ср";
+var thu$7 = "Чт";
+var fri$7 = "Пт";
+var sat$7 = "Сб";
+var sun$7 = "Вск";
+var search$7 = "Поиск...";
 var trEN = {
 	day: day$7,
 	week: week$7,
