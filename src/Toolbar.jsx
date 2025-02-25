@@ -86,6 +86,7 @@ function SchedulerToolbar (props) {
   }
 
   const handleOpenDateSelector = (event) => {
+    console.log('handleOpenDateSelector')
     setAnchorDateEl(event.currentTarget)
   }
 
