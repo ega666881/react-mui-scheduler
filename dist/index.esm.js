@@ -11,7 +11,7 @@ import { Autocomplete, Box, TextField, Toolbar, Grid, Typography, Hidden, IconBu
 import { format, parse, getDaysInMonth, sub, add, isSameMonth, differenceInMinutes, isValid, getWeeksInMonth, startOfMonth, getDay, isSameDay, startOfWeek, startOfDay } from 'date-fns';
 import _extends from '@babel/runtime/helpers/extends';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { LocalizationProvider } from '@mui/x-date-pickers';
 import StaticDatePicker from '@mui/lab/StaticDatePicker';
 import CloseIcon from '@mui/icons-material/Close';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -499,6 +499,7 @@ function SchedulerToolbar(props) {
   };
 
   var handleOpenDateSelector = function handleOpenDateSelector(event) {
+    console.log('handleOpenDateSelector');
     setAnchorDateEl(event.currentTarget);
   };
 
