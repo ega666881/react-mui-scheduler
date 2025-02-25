@@ -1,6 +1,6 @@
 {
   "name": "react-mui-calendar-hse",
-  "version": "2.1.7",
+  "version": "2.1.8",
   "description": "📅 React mui scheduler is a react component based on @mui v5 that allows you to manage data in a calendar",
   "main": "dist/index.esm.js",
   "scripts": {
@@ -32,6 +32,7 @@
     "@mui/material": "^5.5.3",
     "@mui/styles": "^5.5.3",
     "@mui/system": "^5.5.3",
+    "@mui/x-date-pickers": "^7.27.1",
     "date-fns": "^2.28.0",
     "i18next": "^21.6.16",
     "prop-types": "^15.8.1",

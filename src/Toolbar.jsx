@@ -9,7 +9,7 @@ import {
   Divider, ListItemIcon, Menu, MenuItem, Grid, Stack
 } from "@mui/material"
 import { useTheme } from "@mui/material/styles"
-import LocalizationProvider from '@mui/lab/LocalizationProvider'
+import { LocalizationProvider } from '@mui/x-date-pickers'
 import StaticDatePicker from '@mui/lab/StaticDatePicker'
 import CloseIcon from '@mui/icons-material/Close'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
