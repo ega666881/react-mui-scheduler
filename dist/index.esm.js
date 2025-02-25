@@ -326,8 +326,8 @@ function ToolbarSearchbar(props) {
   var events = props.events,
       _onInputChange = props.onInputChange;
 
-  var _useTranslation = useTranslation(['common']),
-      t = _useTranslation.t;
+  var _useTranslation = useTranslation(['common']);
+      _useTranslation.t;
 
   var _useState = useState(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -401,7 +401,7 @@ function ToolbarSearchbar(props) {
     renderInput: function renderInput(params) {
       return /*#__PURE__*/React.createElement(TextField, _extends({}, params, {
         size: "small",
-        label: t('search'),
+        label: 'Поиск',
         InputProps: _objectSpread$4({}, params.InputProps)
       }));
     }
@@ -701,19 +701,16 @@ function SchedulerToolbar(props) {
       setMode(newMode);
     }
   }, [{
-    label: t('month'),
+    label: t('месяц'),
     value: 'month'
-  },
-  //   {
-  //   label: t('week'),
-  //   value: 'week'
-  // },
-  //   {
-  //   label: t('day'),
-  //   value: 'day'
-  // },
-    {
-    label: t('timeline'),
+  }, {
+    label: t('неделя'),
+    value: 'week'
+  }, {
+    label: t('день'),
+    value: 'day'
+  }, {
+    label: t('график времени'),
     value: 'timeline'
   }].map(function (tb) {
     return /*#__PURE__*/React.createElement(ToggleButton, {
@@ -752,7 +749,7 @@ function SchedulerToolbar(props) {
   })), /*#__PURE__*/React.createElement(Typography, {
     variant: "body2"
   }, "Settings"))), /*#__PURE__*/React.createElement(Collapse, {
-    in: alertProps === null || alertProps === void 0 ? void 0 : alertProps.open
+    "in": alertProps === null || alertProps === void 0 ? void 0 : alertProps.open
   }, /*#__PURE__*/React.createElement(Alert, {
     color: alertProps === null || alertProps === void 0 ? void 0 : alertProps.color,
     severity: alertProps === null || alertProps === void 0 ? void 0 : alertProps.severity,
@@ -2014,7 +2011,7 @@ function Scheduler(props) {
     var _options$startWeekOn;
 
     if ((options === null || options === void 0 ? void 0 : (_options$startWeekOn = options.startWeekOn) === null || _options$startWeekOn === void 0 ? void 0 : _options$startWeekOn.toUpperCase()) === 'SUN') {
-      return [t('sun'), t('mon'), t('tue'), t('wed'), t('thu'), t('fri'), t('sat')];
+      return [t('вск'), t('пн'), t('вт'), t('ср'), t('чт'), t('пт'), t('сб')];
     }
 
     return weeks;
@@ -2546,7 +2543,7 @@ function Scheduler(props) {
     alignItems: "center",
     justifyContent: "start"
   }, isMonthMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     item: true,
     xs: 12
@@ -2563,7 +2560,7 @@ function Scheduler(props) {
     onDateChange: handleDateChange,
     onEventsChange: handleEventsChange
   }))), isWeekMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     item: true,
     xs: 12
@@ -2580,7 +2577,7 @@ function Scheduler(props) {
     onDateChange: handleDateChange,
     onEventsChange: handleEventsChange
   }))), isDayMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     item: true,
     xs: 12
@@ -2597,7 +2594,7 @@ function Scheduler(props) {
     onDateChange: handleDateChange,
     onEventsChange: handleEventsChange
   })))), isTimelineMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     container: true,
     spacing: 2,
