@@ -2,15 +2,15 @@ import React, {useState, useEffect, useContext} from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import { format, add, sub, getDaysInMonth, parse } from 'date-fns'
-import AdapterDateFns from '@mui/lab/AdapterDateFns'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import {
   Typography, Toolbar, IconButton, Button, ToggleButton,
   TextField, Hidden, Alert, Collapse, ToggleButtonGroup,
   Divider, ListItemIcon, Menu, MenuItem, Grid, Stack
 } from "@mui/material"
 import { useTheme } from "@mui/material/styles"
-import { LocalizationProvider } from '@mui/x-date-pickers'
-import StaticDatePicker from '@mui/lab/StaticDatePicker'
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import CloseIcon from '@mui/icons-material/Close'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
@@ -208,17 +208,14 @@ function SchedulerToolbar (props) {
               onClose={handleCloseDateSelector}
               MenuListProps={{'aria-labelledby': 'basic-button'}}
             >
-              <LocalizationProvider
-                locale={dateFnsLocale}
-                dateAdapter={AdapterDateFns}
-              >
+              <LocalizationProvider dateAdapter={AdapterDateFns} locale={dateFnsLocale}>
                 <StaticDatePicker
                   displayStaticWrapperAs="desktop"
                   value={selectedDate}
                   onChange={(newValue) => {
-                    setDaysInMonth(getDaysInMonth(newValue))
-                    setSelectedDate(newValue)
-                    handleCloseDateSelector()
+                    setDaysInMonth(getDaysInMonth(newValue));
+                    setSelectedDate(newValue);
+                    handleCloseDateSelector();
                   }}
                   renderInput={(params) => <TextField {...params} />}
                 />

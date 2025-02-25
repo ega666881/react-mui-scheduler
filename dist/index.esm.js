@@ -10,9 +10,9 @@ import { styled, useTheme, alpha } from '@mui/material/styles';
 import { Autocomplete, Box, TextField, Toolbar, Grid, Typography, Hidden, IconButton, Button, Menu, Stack, ToggleButtonGroup, ToggleButton, MenuItem, ListItemIcon, Divider, Collapse, Alert, Paper, TableCell, tableCellClasses, TableRow, TableContainer, Table, TableHead, TableBody, Tooltip, Zoom, Fade, Slide } from '@mui/material';
 import { format, parse, getDaysInMonth, sub, add, isSameMonth, differenceInMinutes, isValid, getWeeksInMonth, startOfMonth, getDay, isSameDay, startOfWeek, startOfDay } from 'date-fns';
 import _extends from '@babel/runtime/helpers/extends';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import StaticDatePicker from '@mui/lab/StaticDatePicker';
+import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import CloseIcon from '@mui/icons-material/Close';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -634,8 +634,8 @@ function SchedulerToolbar(props) {
       'aria-labelledby': 'basic-button'
     }
   }, /*#__PURE__*/React.createElement(LocalizationProvider, {
-    locale: dateFnsLocale,
-    dateAdapter: AdapterDateFns
+    dateAdapter: AdapterDateFns,
+    locale: dateFnsLocale
   }, /*#__PURE__*/React.createElement(StaticDatePicker, {
     displayStaticWrapperAs: "desktop",
     value: selectedDate,
