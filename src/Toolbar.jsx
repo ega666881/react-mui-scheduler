@@ -52,9 +52,9 @@ function SchedulerToolbar (props) {
   const openMenu = Boolean(anchorMenuEl)
   const openDateSelector = Boolean(anchorDateEl)
   const dateFnsLocale = useContext(DateFnsLocaleContext)
-  const isDayMode = mode.toLowerCase() === 'day'
-  const isWeekMode = mode.toLowerCase() === 'week'
-  const isMonthMode = mode.toLowerCase() === 'month'
+  const isDayMode = mode?.toLowerCase() === 'day'
+  const isWeekMode = mode?.toLowerCase() === 'week'
+  const isMonthMode = mode?.toLowerCase() === 'month'
 
   const commonIconButtonProps = {
     size: "medium",
@@ -270,10 +270,10 @@ function SchedulerToolbar (props) {
                 }}
               >
                 {[
-                  { label: t('месяц'), value: 'month' },
-                  { label: t('неделя'), value: 'week' },
-                  { label: t('день'), value: 'day' },
-                  { label: t('график времени'), value: 'timeline' }
+                  { label: t('month'), value: 'month' },
+                  { label: t('week'), value: 'week' },
+                  { label: t('day'), value: 'day' },
+                  { label: t('timeline'), value: 'timeline' }
                 ].map(tb => (
                   <ToggleButton sx={{ mt: .5 }} key={tb.value} value={tb.value}>
                     {tb.label}

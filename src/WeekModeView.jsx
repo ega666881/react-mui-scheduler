@@ -215,7 +215,7 @@ function WeekModeView (props) {
     event.stopPropagation()
     onTaskClick && onTaskClick(event, task)
   }
-  
+  console.log(rows)
   return (
     <StyledTableContainer
       component={Paper}
@@ -252,7 +252,7 @@ function WeekModeView (props) {
                 >
                   <Tooltip
                     placement="right"
-                    title={`${lineTasks} event${lineTasks > 1 ? 's' : ''} on this week timeline`}
+                    title={`${lineTasks} ${lineTasks > 1 ? 'событий' : 'событие'} на этой неделе`}
                   >
                     <StyledTableCell
                       scope="row"

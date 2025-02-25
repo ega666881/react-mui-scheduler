@@ -465,9 +465,9 @@
     var openMenu = Boolean(anchorMenuEl);
     var openDateSelector = Boolean(anchorDateEl);
     var dateFnsLocale = React.useContext(DateFnsLocaleContext);
-    var isDayMode = mode.toLowerCase() === 'day';
-    var isWeekMode = mode.toLowerCase() === 'week';
-    var isMonthMode = mode.toLowerCase() === 'month';
+    var isDayMode = (mode === null || mode === void 0 ? void 0 : mode.toLowerCase()) === 'day';
+    var isWeekMode = (mode === null || mode === void 0 ? void 0 : mode.toLowerCase()) === 'week';
+    var isMonthMode = (mode === null || mode === void 0 ? void 0 : mode.toLowerCase()) === 'month';
     var commonIconButtonProps = {
       size: "medium",
       edge: "start",
@@ -703,16 +703,16 @@
         setMode(newMode);
       }
     }, [{
-      label: t('месяц'),
+      label: t('month'),
       value: 'month'
     }, {
-      label: t('неделя'),
+      label: t('week'),
       value: 'week'
     }, {
-      label: t('день'),
+      label: t('day'),
       value: 'day'
     }, {
-      label: t('график времени'),
+      label: t('timeline'),
       value: 'timeline'
     }].map(function (tb) {
       return /*#__PURE__*/React__default["default"].createElement(material.ToggleButton, {
@@ -1363,6 +1363,7 @@
       onTaskClick && onTaskClick(event, task);
     };
 
+    console.log(rows);
     return /*#__PURE__*/React__default["default"].createElement(StyledTableContainer$1, {
       component: material.Paper,
       sx: {
@@ -1403,7 +1404,7 @@
         }
       }, /*#__PURE__*/React__default["default"].createElement(material.Tooltip, {
         placement: "right",
-        title: "".concat(lineTasks, " event").concat(lineTasks > 1 ? 's' : '', " on this week timeline")
+        title: "".concat(lineTasks, " ").concat(lineTasks > 1 ? 'событий' : 'событие', " \u043D\u0430 \u044D\u0442\u043E\u0439 \u043D\u0435\u0434\u0435\u043B\u0435")
       }, /*#__PURE__*/React__default["default"].createElement(StyledTableCell$1, {
         scope: "row",
         align: "center",
@@ -2278,7 +2279,7 @@
 
       var _loop4 = function _loop4(i) {
         var id = "line_".concat(i);
-        var label = dateFns.format(dayStartHour, 'HH:mm aaa'); //TODO Add everyday event capability
+        var label = dateFns.format(dayStartHour, 'HH:mm'); //TODO Add everyday event capability
         //if (i === 0) {
         //id = `line_everyday`; label = 'Everyday'
         //}
@@ -2348,7 +2349,7 @@
 
       var _loop5 = function _loop5(i) {
         var id = "line_".concat(i);
-        var label = dateFns.format(dayStartHour, 'HH:mm aaa');
+        var label = dateFns.format(dayStartHour, 'HH:mm');
 
         if (i > 0) {
           var obj = {

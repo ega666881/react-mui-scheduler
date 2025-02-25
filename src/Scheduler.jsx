@@ -291,7 +291,7 @@ function Scheduler(props) {
     
     for (let i = 0; i <= HOURS; i++) {
       let id = `line_${i}`
-      let label = format(dayStartHour, 'HH:mm aaa')
+      let label = format(dayStartHour, 'HH:mm')
       
       //TODO Add everyday event capability
       //if (i === 0) {
@@ -344,7 +344,7 @@ function Scheduler(props) {
     
     for (let i = 0; i <= HOURS; i++) {
       let id = `line_${i}`
-      let label = format(dayStartHour, 'HH:mm aaa')
+      let label = format(dayStartHour, 'HH:mm')
       
       if (i > 0) {
         let obj = { id: id, label: label, days: [] }
