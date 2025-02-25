@@ -705,13 +705,16 @@
     }, [{
       label: t('month'),
       value: 'month'
-    }, {
-      label: t('week'),
-      value: 'week'
-    }, {
-      label: t('day'),
-      value: 'day'
-    }, {
+    },
+    //   {
+    //   label: t('week'),
+    //   value: 'week'
+    // },
+    //   {
+    //   label: t('day'),
+    //   value: 'day'
+    // },
+      {
       label: t('timeline'),
       value: 'timeline'
     }].map(function (tb) {
