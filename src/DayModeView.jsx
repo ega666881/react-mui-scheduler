@@ -169,7 +169,7 @@ function DayModeView (props) {
 
       prevEventCell?.data?.splice(transfert?.item?.itemIndex, 1)
       transfert.item.startHour = label
-      transfert.item.endHour = format(newEndHour, 'HH:mm aaa')
+      transfert.item.endHour = format(newEndHour, 'HH:mm')
       transfert.item.date = format(day.date, 'yyyy-MM-dd')
       day.data.push(transfert.item)
       setState({...state, rows: rowsData})

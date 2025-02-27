@@ -1646,7 +1646,7 @@
 
         prevEventCell === null || prevEventCell === void 0 ? void 0 : (_prevEventCell$data = prevEventCell.data) === null || _prevEventCell$data === void 0 ? void 0 : _prevEventCell$data.splice(transfert === null || transfert === void 0 ? void 0 : (_transfert$item = transfert.item) === null || _transfert$item === void 0 ? void 0 : _transfert$item.itemIndex, 1);
         transfert.item.startHour = label;
-        transfert.item.endHour = dateFns.format(newEndHour, 'HH:mm aaa');
+        transfert.item.endHour = dateFns.format(newEndHour, 'HH:mm');
         transfert.item.date = dateFns.format(day.date, 'yyyy-MM-dd');
         day.data.push(transfert.item);
         setState(_objectSpread$1(_objectSpread$1({}, state), {}, {
