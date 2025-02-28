@@ -140,7 +140,7 @@ function SchedulerToolbar (props) {
       setMode(switchMode)
     }
   }, [switchMode])
-  
+
   return (
     <Toolbar 
       variant="dense" 
@@ -244,18 +244,17 @@ function SchedulerToolbar (props) {
                 setSearchResult(newValue)
               }}
             />}
+            {/*<Hidden mdUp>*/}
+            {/*  <IconButton*/}
+            {/*    sx={{mr: 0, "aria-label":"menu"}}*/}
+            {/*    {...commonIconButtonProps}*/}
+            {/*    size="small"*/}
+            {/*    onClick={handleOpenDateSelector}*/}
+            {/*  >*/}
+            {/*    <GridViewIcon />*/}
+            {/*  </IconButton>*/}
+            {/*</Hidden>*/}
             <Hidden mdUp>
-              <IconButton
-                sx={{mr: 0, "aria-label":"menu"}}
-                {...commonIconButtonProps}
-                size="small"
-                onClick={handleOpenDateSelector}
-              >
-                <GridViewIcon />
-              </IconButton>
-            </Hidden>
-            <Hidden mdDown>
-              {toolbarProps?.showSwitchModeButtons &&
               <ToggleButtonGroup
                 exclusive
                 value={mode}
@@ -277,7 +276,7 @@ function SchedulerToolbar (props) {
                     {tb.label}
                   </ToggleButton>
                 ))}
-              </ToggleButtonGroup>}
+              </ToggleButtonGroup>
             </Hidden>
             {/*toolbarProps?.showOptions &&
           <IconButton sx={{ ml: 1 }} onClick={handleOpenMenu}{...commonIconButtonProps}>

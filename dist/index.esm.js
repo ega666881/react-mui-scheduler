@@ -22,7 +22,7 @@ import ArchiveIcon from '@mui/icons-material/Archive';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
-import GridViewIcon from '@mui/icons-material/GridView';
+import '@mui/icons-material/GridView';
 import EventNoteRoundedIcon from '@mui/icons-material/EventNoteRounded';
 import { styled as styled$1 } from '@mui/system';
 import Timeline from '@mui/lab/Timeline';
@@ -677,17 +677,7 @@ function SchedulerToolbar(props) {
     }
   }), /*#__PURE__*/React.createElement(Hidden, {
     mdUp: true
-  }, /*#__PURE__*/React.createElement(IconButton, _extends({
-    sx: {
-      mr: 0,
-      "aria-label": "menu"
-    }
-  }, commonIconButtonProps, {
-    size: "small",
-    onClick: handleOpenDateSelector
-  }), /*#__PURE__*/React.createElement(GridViewIcon, null))), /*#__PURE__*/React.createElement(Hidden, {
-    mdDown: true
-  }, (toolbarProps === null || toolbarProps === void 0 ? void 0 : toolbarProps.showSwitchModeButtons) && /*#__PURE__*/React.createElement(ToggleButtonGroup, {
+  }, /*#__PURE__*/React.createElement(ToggleButtonGroup, {
     exclusive: true,
     value: mode,
     size: "small",
