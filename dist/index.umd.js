@@ -709,6 +709,42 @@
         key: tb.value,
         value: tb.value
       }, tb.label);
+    }))), /*#__PURE__*/React__default["default"].createElement(material.Hidden, {
+      mdDown: true
+    }, /*#__PURE__*/React__default["default"].createElement(material.ToggleButtonGroup, {
+      exclusive: true,
+      value: mode,
+      size: "small",
+      color: "primary",
+      "aria-label": "text button group",
+      sx: {
+        mt: .2,
+        mr: 1.3,
+        display: 'contents'
+      },
+      onChange: function onChange(e, newMode) {
+        setMode(newMode);
+      }
+    }, [{
+      label: t('month'),
+      value: 'month'
+    }, {
+      label: t('week'),
+      value: 'week'
+    }, {
+      label: t('day'),
+      value: 'day'
+    }, {
+      label: t('timeline'),
+      value: 'timeline'
+    }].map(function (tb) {
+      return /*#__PURE__*/React__default["default"].createElement(material.ToggleButton, {
+        sx: {
+          mt: .5
+        },
+        key: tb.value,
+        value: tb.value
+      }, tb.label);
     }))))), /*#__PURE__*/React__default["default"].createElement(material.Grid, {
       item: true,
       xs: 12,

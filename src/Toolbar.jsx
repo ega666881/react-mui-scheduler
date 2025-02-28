@@ -244,17 +244,31 @@ function SchedulerToolbar (props) {
                 setSearchResult(newValue)
               }}
             />}
-            {/*<Hidden mdUp>*/}
-            {/*  <IconButton*/}
-            {/*    sx={{mr: 0, "aria-label":"menu"}}*/}
-            {/*    {...commonIconButtonProps}*/}
-            {/*    size="small"*/}
-            {/*    onClick={handleOpenDateSelector}*/}
-            {/*  >*/}
-            {/*    <GridViewIcon />*/}
-            {/*  </IconButton>*/}
-            {/*</Hidden>*/}
             <Hidden mdUp>
+              <ToggleButtonGroup
+                exclusive
+                value={mode}
+                size="small"
+                color="primary"
+                aria-label="text button group"
+                sx={{ mt: .2, mr: 1.3, display: 'contents' }}
+                onChange={(e, newMode) => {
+                  setMode(newMode)
+                }}
+              >
+                {[
+                  { label: t('month'), value: 'month' },
+                  { label: t('week'), value: 'week' },
+                  { label: t('day'), value: 'day' },
+                  { label: t('timeline'), value: 'timeline' }
+                ].map(tb => (
+                  <ToggleButton sx={{ mt: .5 }} key={tb.value} value={tb.value}>
+                    {tb.label}
+                  </ToggleButton>
+                ))}
+              </ToggleButtonGroup>
+            </Hidden>
+            <Hidden mdDown>
               <ToggleButtonGroup
                 exclusive
                 value={mode}
